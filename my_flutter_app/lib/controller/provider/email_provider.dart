@@ -13,6 +13,7 @@ class EmailProvider extends ChangeNotifier{
     {
       //SnackBar(content: Text('Error'));
       showSnackBar(context, Text("Please! Enter your name"));
+      print('snackbar running');
     }
     else if(email1.isEmpty)
     {

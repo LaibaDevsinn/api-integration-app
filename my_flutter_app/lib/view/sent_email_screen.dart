@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:my_flutter_app/common/custom_textformfield.dart';
 import 'package:my_flutter_app/controller/provider/email_provider.dart';
@@ -13,9 +11,9 @@ class SendEmailScreen extends StatefulWidget {
 }
 
 class _SendEmailScreenState extends State<SendEmailScreen> {
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController messageController = TextEditingController();
+   TextEditingController nameController = TextEditingController();
+   TextEditingController emailController = TextEditingController();
+   TextEditingController messageController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +26,7 @@ class _SendEmailScreenState extends State<SendEmailScreen> {
             title: const Text("Send your email"),
           ),
           body: provider.isLoading
-              ?const  Center(
+              ? const Center(
                   child: CircularProgressIndicator.adaptive(),
                 )
               : Stack(children: [
@@ -110,7 +108,7 @@ class _SendEmailScreenState extends State<SendEmailScreen> {
                                     email1: emailController.text,
                                     message1: messageController.text);
                               },
-                              child: Text('Send'))))
+                              child:const Text('Send'))))
                 ]),
         );
       }),
