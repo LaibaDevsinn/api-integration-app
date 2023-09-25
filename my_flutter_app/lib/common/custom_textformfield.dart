@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
-  var text;
-   CustomTextFormField({super.key, required this.text});
+  var text, con;
+ 
+   CustomTextFormField({super.key, required this.text, required this.con});
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class CustomTextFormField extends StatelessWidget {
         color: Colors.white,
       ),
       child: TextField(
+        controller: con,
         decoration: InputDecoration(
           border: InputBorder.none,
           contentPadding: const EdgeInsets.all(15),
